@@ -6,7 +6,6 @@ namespace Ve\UnitTest;
  * A simple class to demonstrate unit testing
  *
  * @package Ve\UnitTest
- * @author  Steve West
  * @since   1.0
  */
 class Test
@@ -17,11 +16,25 @@ class Test
 	 *
 	 * @return string
 	 * @since  1.0
-	 * @author Steve West
 	 */
 	public function returnHello()
 	{
 		return 'Hello';
+	}
+
+	/**
+	 * Adds two numbers together and returns the result
+	 *
+	 * @param int $a
+	 * @param int $b
+	 *
+	 * @return int
+	 *
+	 * @since 1.0
+	 */
+	public function addNumbers($a, $b)
+	{
+		return $a + $b;
 	}
 
 }

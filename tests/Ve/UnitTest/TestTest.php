@@ -25,7 +25,7 @@ class TestTest extends \PHPUnit_Framework_TestCase
 
 	/**
 	 * @coversDefaultClass returnHello
-	 * @group 			   UnitTest
+	 * @group              UnitTest
 	 */
 	public function testHello()
 	{
@@ -33,6 +33,28 @@ class TestTest extends \PHPUnit_Framework_TestCase
 			'Hello',
 			$this->object->returnHello()
 		);
+	}
+
+	/**
+	 * @coversDefaultClass addNumbers
+	 * @group              UnitTest
+	 * @dataProvider       numberProvider
+	 */
+	public function testAdd($a, $b, $expected)
+	{
+		$this->assertEquals(
+			$expected,
+			$this->object->addNumbers($a, $b)
+		);
+	}
+
+	public function numberProvider()
+	{
+		return [
+			[1, 1, 2],
+			[2, 3, 5],
+			[100, 50, 150],
+		];
 	}
 
 }
