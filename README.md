@@ -11,7 +11,7 @@ The aim of this is to produce a small application that has been developed using 
 # Set up the project for testing
 
 1. Open up netbeans and create a new project with the cloned repo. (I am using netbeans 7.3 but the steps should be the same)
-2. From the run configuration dropdown (should say "<default>) select "customise"
+2. From the run configuration dropdown (should say `<default>`) select "customise"
 3. Click "PHPUnit" from the left.
 4. Tick "Use XML Configuration" and select the "phpunit.xml" from the root of the project
 
