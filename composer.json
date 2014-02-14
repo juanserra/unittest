@@ -1,0 +1,23 @@
+{
+    "name": "veinteractive/unittest",
+    "type": "library",
+    "description": "",
+    "keywords": [],
+    "homepage": "http://veinteractive.com",
+    "license": "TBD",
+    "authors": [
+        {
+            "name": "Ve Interactive Core Team",
+            "email": "team@fuelphp.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4"
+    },
+    "require-dev": {
+        "mockery/mockery": "0.7.*"
+    },
+    "autoload": {
+        "psr-0": { "Ve\\UnitTest": "src/" }
+    }
+}
