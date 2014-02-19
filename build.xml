@@ -23,18 +23,11 @@
   </target>
 
   <!-- Default target -->
-  <target name="build" depends="init,phpunit,php-documentor" />
-
-  <target name="php-documentor">
-    <exec executable="phpdoc" dir="${basedir}/gameplay">
-      <arg line="-ct type -t ${basedir}/build/api -ti 'Name of your project' -ue on -s -d ./ "/>
-    </exec>
-  </target>
+  <target name="build" depends="init,phpunit" />
   
   <target name="phpunit">
     <exec executable="phpunit" dir="${basedir}/tests" failonerror="off">
-      <arg line="--log-xml ${basedir}/build/logs/phpunit.xml
-                 --log-pmd ${basedir}/build/logs/phpunit.pmd.xml
+      <arg line="--log-pmd ${basedir}/build/logs/phpunit.pmd.xml
                  --log-metrics ${basedir}/build/logs/metrics.xml
                  --coverage-xml  ${basedir}/build/logs/coverage.xml
                  --coverage-html ${basedir}/build/coverage
