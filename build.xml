@@ -26,7 +26,13 @@
   <target name="build" depends="init,phpunit" />
   
   <target name="phpunit">
-    <exec executable="phpunit" dir="${basedir}" failonerror="off">
+    <exec executable="wget" dir="${basedir}">
+      <arg line="curl -s http://getcomposer.org/installer | php" />
     </exec>
+    <exec executable="php">
+      <arg line="composer.phar install --dev" />
+    </exec>
+    
+    <exec executable="phpunit" dir="${basedir}" failonerror="off"></exec>
   </target>
 </project>
