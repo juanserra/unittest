@@ -26,7 +26,7 @@
   <target name="build" depends="init,phpunit" />
   
   <target name="phpunit">
-    <exec executable="phpunit" dir="${basedir}/tests" failonerror="off">
+    <exec executable="phpunit" dir="${basedir}" failonerror="off">
     </exec>
   </target>
 </project>
