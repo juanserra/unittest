@@ -29,7 +29,11 @@
     
     <exec executable="/bin/bash">
         <arg value="-c" />
-        <arg value="curl -s https://getcomposer.org/installer | php" />
+        <arg value="curl -s https://getcomposer.org/installer > composer_install" />
+    </exec>
+    
+    <exec executable="php">
+      <arg line="composer_install" />
     </exec>
     
     <exec executable="php">
