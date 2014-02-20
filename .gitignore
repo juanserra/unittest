@@ -2,3 +2,5 @@
 nbproject
 coverage/
 vendor/
+composer.phar
+composer_install
